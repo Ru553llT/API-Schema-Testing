@@ -21,7 +21,7 @@ jobs:
         with:
           browser: chrome
           install: true
-          working-directory: API-Schema-Testing/Tests
+          working-directory: Tests
           config-file: cypress.config.js
     
           
