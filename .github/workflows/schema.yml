@@ -1,0 +1,30 @@
+name: schema Tests
+
+# You may want to add a schedule to run this workflow every day
+on:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+
+ 
+          
+ 
+       
+      - name: Cypress run
+        uses: cypress-io/github-action@v6.6.1
+        with:
+          browser: chrome
+          install: true
+          working-directory: Tests
+          config-file: cypress.config.js
+    
+          
