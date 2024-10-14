@@ -4,24 +4,23 @@ Further details on the whole process mentioned below:
 https://dev.to/sebastianclavijo/cypress-ajv-schema-validator-plugin-the-brave-vigilante-for-your-api-contracts-5cfeSetup 
 
 
-Setup
-
-a new folder and install cypress as usual
-Npx cypress open as usual to finish installation and setup folder structure
+Setup a new folder and install cypress as usual
+Then run ```npx cypress open``` as usual to finish installation and setup folder structure
 
 
 Run this in Terminal:
-npm install cypress-ajv-schema-validator
+```npm install cypress-ajv-schema-validator```
 
 
 Add these 2 to the commands.js file:
+```
 import 'cypress-ajv-schema-validator'
 import validateSchema from 'cypress-ajv-schema-validator'
-
+```
 
 Write your test script containing this (the schema is in here as shown)
 
-
+```
 describe('API Schema Validation with Plain JSON', () => {
     it('should validate the user data using plain JSON schema', () => {
       const schema = {
@@ -58,11 +57,9 @@ describe('API Schema Validation with Plain JSON', () => {
         });
     });
   });
-
+```
 
 This will show it as a pass like this:
-
-
 
 To see a failed test and the information breakdown of why it failed - run the chuck fail test in your personal repo
 
